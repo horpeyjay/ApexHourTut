@@ -1,0 +1,4 @@
+SELECT Name, NumberOfEmployees, Phone
+  FROM Account
+  WHERE AnnualRevenue >= 100000
+  LIMIT 10
