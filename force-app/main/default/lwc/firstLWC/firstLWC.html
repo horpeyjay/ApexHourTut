@@ -1,0 +1,24 @@
+<template>
+    <div class="slds-m-around_large">
+        <h1>You're Welcome to my first LWC creation</h1>
+    <lightning-input label="Type here" required value={inputText} onchange={handleClick}></lightning-input> 
+    <p>
+        Hello {greeting}
+    </p>
+    <p>
+        {inputText}
+    </p>
+    <p>
+        <lightning-button label="Click Me" value="Click Me" onclick={handleSubmit}></lightning-button>
+    </p>
+    </div>
+
+    <div class="slds-m-around_large">
+        <template for:each={result} for:item="contact">
+            <p key={contact.Id}>
+                {contact.Id} 
+                {contact.Email}
+            </p>
+        </template>
+    </div>
+</template>
